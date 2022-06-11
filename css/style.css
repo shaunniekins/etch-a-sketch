@@ -1,0 +1,135 @@
+:root {
+    --primary_color: #293241;
+    --text_color: #ffffff;
+    --secondary_color: #3d5a80;
+    --tertiary_color: #98c1d9;
+    --light_color: #e0fbfc;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary_color);
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--text_color)
+}
+
+header {
+    font-size: 30px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem
+}
+
+.settings {
+    background-color: var(--tertiary_color);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+input[type='color'] {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 80px;
+    border: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+    box-shadow: rgba(0, 0, 0, 1) 0px 3px 10px;
+}
+
+.settings > button{
+    background-color: var(--secondary_color);
+    border: none;
+    padding: 0.75rem;
+    width: 12rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 15px;
+}
+
+.settings > button:hover,
+.settings > input[type="color"]:hover {
+    transform: scale(1.10);
+    transition: 0.25s;
+}
+
+.settings > button.active {
+    background-color: var(--primary_color);
+}
+
+.settings #size > #sizeValue {
+    color: var(--primary_color);
+    font-size: 20px;
+    text-align: center;
+    width: 12rem;
+    padding: 0.75rem;
+}
+
+.settings > #size > input[type="range"] {
+    width: 12rem;
+    border: none;
+}
+
+#grid__container {
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: rgba(0, 0, 0, 1) 0px 3px 10px;
+    height: 600px;
+    width: 600px;
+    display: grid;
+}
+
+.grid-item.active {
+  border: 1px solid lightgray;
+}
+
+.settings > #clearBtn:hover {
+    background-color: var(--primary_color)
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    background-color: var(--tertiary_color);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--primary_color);
+}
