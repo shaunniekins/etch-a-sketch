@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/cd6b3e1f8f.js" crossorigin="anonymous"></script>
+    <script src="./js/main.js" defer></script>
+    <title>Etch-a-Sketch</title>
+</head>
+<body>
+    <header>
+        <h1>Etch-a-Sketch</h1>
+    </header>
+    <main>
+        <div class="settings">
+            <input id="colorPicker" type="color"/>
+            <button id="colorBtn">Color mode</button>
+            <button id="rainbowBtn">Rainbow mode</button>
+            <button id="eraserBtn">Eraser</button>
+            <div id="size">
+              <div id="sizeValue">16 x 16</div>
+              <input id="sizeSlider" type="range" value="16" min="1" max="64">              
+            </div>
+            <button id="showGrid">Show grid</button>
+            <button id="clearBtn">Clear</button>
+        </div>
+        <div id="grid__container"></div>
+    </main>
+    <footer class="footer">
+        <p>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          <a href="https://github.com/shaunniekins" target="_blank">
+              shaunniekins
+            <i class="fab fa-github"></i>
+          </a>
+        </p>
+      </footer>
+</body>
+</html>
